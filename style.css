@@ -1,0 +1,357 @@
+/* ---------------- BASE ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #111b40;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ---------------- SMOOTH SCROLL ---------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------------- NAVBAR ---------------- */
+nav {
+  background: #111b40;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #222f61;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav .logo {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: auto;
+  font-family: "Delius Unicase", cursive;
+}
+
+nav .logo span {
+  color: #0eb911;
+  text-shadow: 0 0 15px #e1eae1;
+}
+
+.center-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 7px 10px;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+nav a:hover {
+  background: #2a3c7d;
+}
+
+/* ---------------- HOME ---------------- */
+.home-section {
+  padding: 40px;
+}
+
+.home-section .title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.home-section .auto {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.home-content {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.left-content img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.right-content {
+  max-width: 600px;
+}
+
+.right-content .desc {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.title-2 {
+  font-size: 25px;
+  margin: 15px 0;
+}
+
+.sub-content {
+  margin-top: 30px;
+  padding: 20px;
+  background: #1a2550;
+  border-radius: 8px;
+}
+
+.title-3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.desc-2 {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* ---------------- ABOUT ---------------- */
+.about-section {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-title {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-block {
+  margin-bottom: 50px;
+}
+
+.block-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ---------------- ADVENTURES 5x5 ---------------- */
+.adventure-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  scroll-behavior: smooth; /* smooth horizontal/vertical scroll */
+}
+
+.adventure-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #1b275a;
+  text-align: center;
+  border: 1px solid #263777;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.adventure-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.adventure-card p {
+  padding: 8px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.adventure-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(14, 185, 17, 0.3);
+}
+
+/* ---------------- ARTS 4x4 ---------------- */
+.arts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  scroll-behavior: smooth;
+}
+
+.arts-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #16285c;
+  text-align: center;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.arts-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.arts-card p {
+  padding: 8px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.arts-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(14, 185, 17, 0.3);
+}
+
+/* ---------------- FAVORITE SONGS ---------------- */
+.songs-row-container {
+  display: flex;
+  justify-content: center; /* center the entire songs section */
+  scroll-behavior: smooth;
+}
+
+.songs-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+.song-card {
+  min-width: 180px;
+  background: #0f173a;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  padding: 10px;
+  flex-shrink: 0;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.song-card img {
+  width: 100%;
+  border-radius: 8px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.song-card h4 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.song-card audio {
+  width: 100%;
+  border-radius: 6px;
+  outline: none;
+}
+
+.song-card:hover {
+  transform: scale(1.05);
+  background: #1b2a57;
+  box-shadow: 0 0 20px rgba(14, 185, 17, 0.3);
+}
+
+/* ---------------- SCENERIES ---------------- */
+.scenery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  scroll-behavior: smooth;
+}
+
+.scenery-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #1b1f45;
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.scenery-card video {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.scenery-card p {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.scenery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 80, 0.3);
+}
+
+/* ---------------- CONTACT ---------------- */
+.contact-section {
+  padding: 50px 20px;
+  background: #0f173a;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contact-card {
+  background: #1b255f;
+  border-radius: 12px;
+  padding: 25px 20px;
+  width: 200px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.contact-card i {
+  color: #0eb911;
+  margin-bottom: 15px;
+}
+
+.contact-card h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.contact-card p,
+.contact-card a {
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(14, 185, 17, 0.4);
+}
